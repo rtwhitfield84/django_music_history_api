@@ -20,9 +20,12 @@ from django.contrib import admin
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
+router.register(r'artists', views.ArtistViewSet)
+router.register(r'genres', views.GenreViewSet)
+router.register(r'albums', views.AlbumViewSet)
+router.register(r'songs', views.SongViewSet)
 
 urlpatterns = [
 	url(r'^', include(router.urls)),
 	url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-    # url(r'^admin/', admin.site.urls),
 ]
