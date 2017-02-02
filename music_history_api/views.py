@@ -2,7 +2,7 @@
 
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .serializers import UserSerializer, ArtistSerializer,GenreSerializer,AlbumSerializer,SongSerializer
+from .serializers import UserSerializer, ArtistSerializer,GenreSerializer,AlbumSerializer,SongSerializer,RestrictedUserSerializer
 from .models import Artist, Genre, Album, Song
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -12,9 +12,12 @@ class UserViewSet(viewsets.ModelViewSet):
 	@rtwhitfield84
 
 	"""
-
 	queryset = User.objects.all()
-	serializer_class = UserSerializer
+
+	def get_serializer_class(self):
+		if self.request.user.is_superuser:
+			return UserSerializer
+		return RestrictedUserSerializer
 
 class ArtistViewSet(viewsets.ModelViewSet):
 
@@ -23,7 +26,7 @@ class ArtistViewSet(viewsets.ModelViewSet):
 	@rtwhitfield84
 
 	"""
-
+	
 	queryset = Artist.objects.all()
 	serializer_class = ArtistSerializer
 
