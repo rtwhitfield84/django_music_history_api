@@ -11,7 +11,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = User
-		fields = '__all__'
+		fields = ('first_name', 'last_name', 'username', 'email', 'password', 'groups',
+                  'is_staff', 'is_active', 'is_superuser', 'last_login',
+                  'date_joined',)
 
 class RestrictedUserSerializer(serializers.HyperlinkedModelSerializer):
 	"""

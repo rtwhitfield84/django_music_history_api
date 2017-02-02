@@ -9,7 +9,7 @@ class ArtistSerializer(serializers.HyperlinkedModelSerializer):
 	@rtwhitfield84
 
 	"""
-	user = user_serializer.RestrictedUserSerializer(source='user')
+	user = user_serializer.RestrictedUserSerializer('user')
 
 
 	class Meta:
