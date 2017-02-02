@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 from music_history_api.models import *
+from music_history_api.serializers import user_serializer
+
 
 class SongSerializer(serializers.HyperlinkedModelSerializer):
 	"""
@@ -12,5 +14,5 @@ class SongSerializer(serializers.HyperlinkedModelSerializer):
 
 
 	class Meta:
-		model = Song
+		model = song_model.Song
 		fields = ('user','title', 'release_date', 'length', 'artist','album', 'genre',)

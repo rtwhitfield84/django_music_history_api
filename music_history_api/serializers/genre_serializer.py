@@ -11,5 +11,5 @@ class GenreSerializer(serializers.HyperlinkedModelSerializer):
 
 
 	class Meta:
-		model = Genre
+		model = genre_model.Genre
 		fields = ('name',)

@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework import routers
-from music_history_api import views
+from music_history_api.views import *
 from django.contrib import admin
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'artists', views.ArtistViewSet)
-router.register(r'genres', views.GenreViewSet)
-router.register(r'albums', views.AlbumViewSet)
-router.register(r'songs', views.SongViewSet)
+router.register(r'users', user_view.UserViewSet)
+router.register(r'artists', artist_view.ArtistViewSet)
+router.register(r'genres', genre_view.GenreViewSet)
+router.register(r'albums', album_view.AlbumViewSet)
+router.register(r'songs', song_view.SongViewSet)
 
 urlpatterns = [
 	url(r'^', include(router.urls)),
