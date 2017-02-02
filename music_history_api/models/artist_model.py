@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+
 class Artist(models.Model):
 	"""
 	Artist model maintains the information realted to an artist

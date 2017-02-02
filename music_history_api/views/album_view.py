@@ -11,5 +11,18 @@ class AlbumViewSet(viewsets.ModelViewSet):
 
 	"""
 
-	queryset = album_model.Album.objects.all()
+	def get_queryset(self):
+
+		"""
+		overides the default method to dynamically determine queryset
+		returns the albums associated with the current user
+
+		"""
+
+		if self.request.user.is_superuser:
+			return album_model.Album.objects.all()
+		else:
+			return album_model.Album.objects.filter(user=self.request.user)
+
+
 	serializer_class = album_serializer.AlbumSerializer

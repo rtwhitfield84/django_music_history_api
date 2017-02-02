@@ -9,5 +9,3 @@ admin.site.register(song_model.Song)
 
 
 
-# modularize and enacpsulate models,serializers,views
-# init.py file in each dir with __all__ = ['module']
