@@ -6,14 +6,15 @@ app.config(function($routeProvider) {
 	$routeProvider
 	.when('/artists', {
 		templateUrl: 'partials/artist.html',
-		controller: 'DjangularCtrl'
+		controller: 'ArtistCtrl'
 	})
 	.when('/albums', {
 		templateUrl: 'partials/album.html',
-		controller: 'DjangularCtrl'
+		controller: 'AlbumCtrl'
 	})
 	.when('/songs', {
 		templateUrl: 'partials/song.html',
-		controller: 'DjangularCtrl'
-	});
+		controller: 'SongCtrl'
+	})
+	.otherwise('/');
 });
