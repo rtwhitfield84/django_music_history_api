@@ -19,7 +19,6 @@ from music_history_api.views import *
 from django.contrib import admin
 
 router = routers.DefaultRouter()
-router.register(r'users', user_view.UserViewSet,'users')
 router.register(r'artists', artist_view.ArtistViewSet,'artists')
 router.register(r'genres', genre_view.GenreViewSet,'genres')
 router.register(r'albums', album_view.AlbumViewSet,'albums')

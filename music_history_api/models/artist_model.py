@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -8,10 +7,9 @@ class Artist(models.Model):
 	@rtwhitfield84
 
 	"""
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	name = models.CharField(max_length=128)
-	year_established = models.CharField(max_length=4, blank=True)
-	label = models.CharField(max_length=128, blank=True)
+	year_established = models.CharField(max_length=4, null=True, blank=True)
+	label = models.CharField(max_length=128, null=True, blank=True)
 
 	class Meta:
 		verbose_name_plural = 'Artists'
