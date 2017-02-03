@@ -10,10 +10,11 @@
 
 <body ng-app="MusicHistoryApp" ng-controller="MainCtrl">
  <div class="row">
- <div class="col-md-12" ng-include="partials/main.html"></div>
+ <div class="col-md-12" ng-include="'partials/main.html'">
+</div>
 <div class="col-md-12" ng-view></div>
 </div>
-<!-- </div>   -->
+<!-- third party   -->
 	<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script> 
@@ -22,7 +23,7 @@
 	<!-- providers -->
 	<script type="text/javascript" src="app/factories/djangularFactory.js"></script>
 	<!-- controllers -->
-	<script type="text/javascript" src="app/controllers/DjangularCtrl.js"></script>
+	<!-- <script type="text/javascript" src="app/controllers/DjangularCtrl.js"></script> -->
 	<script type="text/javascript" src="app/controllers/MainCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/AlbumCtrl.js"></script>
 	<script type="text/javascript" src="app/controllers/ArtistCtrl.js"></script>

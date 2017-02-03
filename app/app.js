@@ -15,6 +15,5 @@ app.config(function($routeProvider) {
 	.when('/songs', {
 		templateUrl: 'partials/song.html',
 		controller: 'SongCtrl'
-	})
-	.otherwise('/');
+	});
 });

@@ -4,20 +4,20 @@ app.controller('MainCtrl', function($scope,$window) {
 
 
 	$scope.touchMusicArtists =() => {
-		console.log("happened ctrl");
-		$window.location.href = '#/artist';
+		console.log("happened art ctrl");
+		$window.location.href = '#/artists';
 
 	};
 
 		$scope.touchMusicAlbums =() => {
 		console.log("happened ctrl");
-			$window.location.href = '#/album';
+			$window.location.href = '#/albums';
 
 	};
 
 		$scope.touchMusicSongs =() => {
 		console.log("happened ctrl");
-			$window.location.href = '#/song';
+			$window.location.href = '#/songs';
 
 	};
 

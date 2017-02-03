@@ -4,7 +4,7 @@ app.controller('ArtistCtrl', function($scope,MusicStorage,$window) {
 	$scope.artists = [];
 
 	$scope.touchApiArtists =() => {
-		console.log("happened ctrl");
+		console.log("happened artcsadsd ctrl");
 		MusicStorage.getArtist()
 		.then((data) => {
 			console.log("data", data);
