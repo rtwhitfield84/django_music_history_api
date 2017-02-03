@@ -1,6 +1,9 @@
-<div class="col-md-12">
 <div ng-repeat="x in songs">
 	<div class="card">
 		<h1>{{x.title}}</h1>
+		<h3>By: {{x.artist.name}}</h3>
+		<h3>Album: {{x.album.title}}</h3>
+		<h3>Genre: {{x.genre.name}}</h3>
+		<h3>Length: {{x.length}}</h3>
 	</div>
 </div>

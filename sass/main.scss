@@ -1,5 +1,18 @@
+body{
+	background-color: #B4BDBF;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.title{
+	text-align: center;
+	font-size: 6em;
+	color: #fff;
+	text-shadow: 2px 2px 2px #000;
+}
+
 .card {
 	text-align: center;
+	text-shadow: 2px 2px 2px #fff;
 	font-size: 1.4em;
 	margin: 4% 4%;
 	border:3px solid #fff;
