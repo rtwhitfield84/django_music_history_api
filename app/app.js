@@ -20,12 +20,12 @@ app.config(function($routeProvider) {
 		controller: 'SongCtrl'
 	})
 	.when('/search', {
-		templateUrl: 'partials/search.html'
-		// controller: 'SearchCtrl'
+		templateUrl: 'partials/search.html',
+		controller: 'SearchCtrl'
 	})
 	.when('/add', {
-		templateUrl: 'partials/add.html'
-		// controller: 'SearchCtrl'
+		templateUrl: 'partials/add.html',
+		controller: 'AddCtrl'
 	})
 	.otherwise('/');
 });

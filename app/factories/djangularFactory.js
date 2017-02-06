@@ -1,4 +1,4 @@
-"use strict";
+	"use strict";
 
 app.factory('MusicStorage',($http) =>{
 
@@ -6,6 +6,20 @@ app.factory('MusicStorage',($http) =>{
 	function getArtist() {
 		return new Promise((resolve,reject) => {
 			$http.get(`http://localhost:8000/artists/`)
+			.success((data) => {
+				resolve(data);
+			})
+			.error((error) => {
+				reject(error);
+			});
+		});
+	}
+
+//post artist
+	function postArtist(artist) {
+		return new Promise((resolve,reject) => {
+			$http.post(`http://localhost:8000/artists.json`,
+				angular.toJson(artist))
 			.success((data) => {
 				resolve(data);
 			})
@@ -41,5 +55,5 @@ app.factory('MusicStorage',($http) =>{
 		});
 	}
 
-	return {getArtist, getAlbum, getSong};
+	return {getArtist, getAlbum, getSong, postArtist};
 });

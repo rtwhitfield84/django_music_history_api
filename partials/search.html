@@ -3,23 +3,26 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Feature soon to come!</h1>
+    <!-- <h2 class="text-center">Select what you'd like to filter on!</h2> -->
+    <h2 class="text-center">Feature to come!</h2>
+  <form class="text-center">
+    <label class="radio-inline">
+      <input ng-model="artist" ng-model="radioVal" ng-change="getVal('artist')" type="radio" name="optradio" ng-value="'artist'">Artist
+    </label>
+    <label class="radio-inline">
+      <input ng-model="album" ng-model="radioVal" ng-change="getVal('album')" type="radio" name="optradio" ng-value="'album'">Album
+    </label>
+    <label class="radio-inline">
+      <input ng-model="song" ng-model="radioVal" ng-change="getVal('song')" type="radio" name="optradio" ng-value="'song'">Song
+    </label>    
+    <label class="radio-inline">
+      <input ng-model="genre" ng-model="radioVal" ng-change="getVal('genre')" type="radio" name="optradio" ng-value="'genre'">Genre
+    </label>    
+  </form>
     <div class="input-group input-group-justified">
   <div class="input-group-btn">
-    <!-- Button and dropdown menu -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Filter on <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Artists</a></li>
-        <li><a href="#">Albums</a></li>
-        <li><a href="#">Songs</a></li>
-        <li><a href="#">Genre</a></li>
-      </ul>
-    </div>
   </div>
-  <input size="250" type="text" class="form-control" aria-label="...">
+  <input size="250" type="text" class="form-control" ng-model="searchText" ng-change="search()" aria-label="...">
 </div>
   </div>
 </div>

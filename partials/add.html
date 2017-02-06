@@ -20,17 +20,17 @@
 <form>
   <div class="form-group">
     <label for="name">Name:</label>
-    <input type="text" class="form-control" id="artistName">
+    <input type="text" class="form-control" id="artistName" ng-model="artistAdd.name">
   </div>
   <div class="form-group">
     <label for="yearEstablished">Year Established:</label>
-    <input type="text" class="form-control" id="yearEstablished">
+    <input type="text" class="form-control" id="yearEstablished" ng-model="artistAdd.year_established">
   </div>  
   <div class="form-group">
     <label for="label">Label:</label>
-    <input type="text" class="form-control" id="label">
+    <input type="text" class="form-control" id="label" ng-model = "artistAdd.label">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default" ng-click="addArtist(artist)">Submit</button>
 </form>
 </div>
 </div>

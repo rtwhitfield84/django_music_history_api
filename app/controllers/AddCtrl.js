@@ -1,13 +1,21 @@
 "use strict";
 
-app.controller('AddCtrl', function($scope,$window) {
+app.controller('AddCtrl', function($scope,$window,MusicStorage) {
 // add model for each form
 
+$scope.artistAdd = {};
 
 
+	console.log("$scope.artist", $scope.artistAdd);
 $scope.addArtist = () => {
-	$scope.value = 'add';
-	console.log("$scope.value", $scope.value);
+		console.log("$scope.artist", $scope.artistAdd);
+
+	MusicStorage.postArtist($scope.artistAdd)
+	.then((data) => {
+		$scope.$apply();
+	});
+
 };
+
 
 });
