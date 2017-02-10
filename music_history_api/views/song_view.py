@@ -11,18 +11,5 @@ class SongViewSet(viewsets.ModelViewSet):
 
 	"""
 
-	def get_queryset(self):
-
-		"""
-		overides the default method to dynamically determine queryset
-		returns the songs associated with the current user
-
-		"""
-
-		if self.request.user.is_superuser:
-			return song_model.Song.objects.all()
-		else:
-			return song_model.Song.objects.filter(user=self.request.user)
-
-
+	queryset = song_model.Song.objects.all()
 	serializer_class = song_serializer.SongSerializer

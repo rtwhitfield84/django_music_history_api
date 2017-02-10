@@ -1,0 +1,9 @@
+<div ng-repeat="x in albums">
+	<div class="card">
+		<h1>{{x.title}}</h1>
+		<h3>By: {{x.artist.name}}</h3>
+		<h3>Released: {{x.release_date}}</h3>
+		<h3>Genre: {{x.genre.name}}</h3>
+		<h3>Length: {{x.length}}</h3>
+	</div>
+</div>

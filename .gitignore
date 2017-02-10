@@ -1,5 +1,9 @@
+.DS_Store 
 __pycache__/
 *.py[cod]
 *$py.class
 db.sqlite3
 venv/
+lib/bower_components 
+lib/node_modules
+lib/.sass-cache

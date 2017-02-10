@@ -1,0 +1,112 @@
+  <h2 class="text-center">Select what you'd like to add!</h2>
+  <form class="text-center">
+    <label class="radio-inline">
+      <input ng-model="artist" type="radio" name="optradio" value="artist">Artist
+    </label>
+    <label class="radio-inline">
+      <input ng-model="album" type="radio" name="optradio" value="album">Album
+    </label>
+    <label class="radio-inline">
+      <input ng-model="song" type="radio" name="optradio" value="song">Song
+    </label>    
+    <label class="radio-inline">
+      <input ng-model="genre" type="radio" name="optradio" value="genre">Genre
+    </label>    
+  </form>
+
+  <!-- add artist form -->
+<div class="container" ng-show="artist=artist">
+<div class="jumbotron">
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="artistName" ng-model="artistAdd.name">
+  </div>
+  <div class="form-group">
+    <label for="yearEstablished">Year Established:</label>
+    <input type="text" class="form-control" id="yearEstablished" ng-model="artistAdd.year_established">
+  </div>  
+  <div class="form-group">
+    <label for="label">Label:</label>
+    <input type="text" class="form-control" id="label" ng-model = "artistAdd.label">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="addArtist();artist =! artist ">Submit</button>
+</form>
+</div>
+</div>
+
+  <!-- add album form -->
+<div class="container" ng-show="album=album">
+<div class="jumbotron">
+<form>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" id="title" ng-model="albumAdd.title">
+  </div>
+  <div class="form-group">
+    <label for="releaseDate">Release Date:</label>
+    <input type="text" class="form-control" id="releaseDate" ng-model="albumAdd.release_date">
+  </div>  
+  <div class="form-group">
+    <label for="length">Length:</label>
+    <input type="text" class="form-control" id="length" ng-model="albumAdd.length">
+  </div>
+    <div class="form-group">
+    <label for="artist">Artist:</label>
+    <input type="text" class="form-control" id="albumArtist" ng-model="albumAdd.artist">
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre:</label>
+    <input type="text" class="form-control" id="albumGenre" ng-model="albumAdd.genre">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="addAlbum();album =! album">Submit</button>
+</form>
+</div>
+</div>
+
+  <!-- add song form -->
+<div class="container" ng-show="song=song">
+<div class="jumbotron">
+<form>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" id="title">
+  </div>
+  <div class="form-group">
+    <label for="releaseDate">Release Date:</label>
+    <input type="text" class="form-control" id="releaseDate">
+  </div>  
+  <div class="form-group">
+    <label for="length">Length:</label>
+    <input type="text" class="form-control" id="length">
+  </div>
+    <div class="form-group">
+    <label for="album">Album:</label>
+    <input type="text" class="form-control" id="songAlbum">
+  </div>
+    <div class="form-group">
+    <label for="artist">Artist:</label>
+    <input type="text" class="form-control" id="songArtist">
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre:</label>
+    <input type="text" class="form-control" id="albumGenre">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="addSong();song =! song">Submit</button>
+</form>
+</div>
+</div>
+
+
+  <!-- add genre form -->
+<div class="container" ng-show="genre=genre">
+<div class="jumbotron">
+<form>
+<div class="form-group">
+  <label for="name">Name:</label>
+  <input type="text" class="form-control" id="genreName">
+</div>
+  <button type="submit" class="btn btn-default" ng-click="addGenre();genre =! genre">Submit</button>
+</form>
+</div>
+</div>

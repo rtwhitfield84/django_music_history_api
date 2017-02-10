@@ -1,7 +1,6 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
 from music_history_api.models import *
-from music_history_api.serializers import user_serializer, artist_serializer, genre_serializer
+from music_history_api.serializers import artist_serializer, genre_serializer
 
 
 class AlbumSerializer(serializers.HyperlinkedModelSerializer):
@@ -10,11 +9,10 @@ class AlbumSerializer(serializers.HyperlinkedModelSerializer):
 	@rtwhitfield84
 
 	"""
-	user = user_serializer.RestrictedUserSerializer('user')
-	artist = artist_serializer.ArtistSerializer('artist')
-	genre = genre_serializer.GenreSerializer('genre')
+	artist = artist_serializer.ArtistSerializer('artist',read_only=True)
+	genre = genre_serializer.GenreSerializer('genre',read_only=True)
 
 
 	class Meta:
 		model = album_model.Album
-		fields = ('user','title', 'release_date', 'length', 'artist', 'genre',)
+		fields = ('title', 'release_date', 'length', 'artist', 'genre',)
